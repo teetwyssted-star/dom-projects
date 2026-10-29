@@ -2,7 +2,7 @@ const generatePasswordButton = document.getElementById("generate-password");
 const passwordLengthRangeInput = document.getElementById("password-length-range-input");
 const passwordLengthOutput = document.getElementById("password-length-output");
 const message = document.getElementById("message");
-const copyGeneratedPassword = document.getElementById("copy-generated-password");
+const copyGeneratedPasswordButton = document.getElementById("copy-generated-password");
 const showGeneratedPassword = document.getAnimations("show-generated-password");
 
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*?";
@@ -17,8 +17,11 @@ const generatePassword = () => {
         do {
             crypto.getRandomValues(random)
         } while(random[0] > limit);
+
+        password += characters[random[0] % characters.length]
     }
 
+    showGeneratedPassword.textContent = password;
 };
 
 const generatePasswordFromRange = () => {
@@ -26,6 +29,18 @@ const generatePasswordFromRange = () => {
     generatePassword();
 };
 
+const copyGeneratedPassword = () => {
+    navigator.clipboard.writeText(showGeneratedPassword.value)
+    copyGeneratedPasswordButton.textContent = "Copied!";
+    message.textContent = "Password copied to clipboard.";
+
+    setTimeout(()=>{
+        copyGeneratedPasswordButton.textContent = "Copy";
+     message.textContent = "Uses letters, numbers, and symbols.";
+    }, 1500)
+};
+
+copyGeneratedPasswordButton.addEventListener("click", copyGeneratedPassword)
 passwordLengthRangeInput.addEventListener("input", generatePasswordFromRange);
 generatePasswordButton.addEventListener("click", generatePassword);
 

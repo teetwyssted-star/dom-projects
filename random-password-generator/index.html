@@ -8,11 +8,11 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body class="bg-[#101B16] flex justify-center items-center py-10">
+  <body class="bg-[#101B16] flex justify-center items-center py-10 font-inter">
 
     <div class="p-9 w-[520px]">
 
-      <div class="w-[520px] bg-[#192B22] p-[36px]">
+      <div class="w-[520px] bg-[#192B22] p-[36px] rounded-[24px]">
 
        <div LOCK MARK>
 
@@ -30,7 +30,7 @@
         Your password
        </div>
 
-       <div class="bg-[#101B16] flex justify-between">
+       <div class="bg-[#101B16] flex justify-between items-center">
          <div 
          id="show-generated-password"
          class="text-[#BBF7D0] text-[18px]">
@@ -49,7 +49,7 @@
         Uses letters, numbers, and symbols.
        </div>
 
-       <div>
+       <div class="flex justify-between">
          <div class="text-[#DCECE2] text-[14px]">Password length</div>
          <div 
          id="password-length-range-input"
@@ -71,11 +71,12 @@
 
        <button 
        id="generate-password"
-       class="text-[#102418] text-[14px]">
+       type="button"
+       class="w-full h-12 mt-7 bg-[#4ADE80] rounded-[12px] text-[#102418] text-[14px]">
         Generate password
       </button>
 
-       <div class="text-[#8AA294] text-[12px]">Generated in your browser. Never saved.</div>
+       <div class="text-[#8AA294] text-[12px] flex justify-center">Generated in your browser. Never saved.</div>
 
       </div>
 
