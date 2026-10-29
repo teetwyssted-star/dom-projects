@@ -5,9 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Random password generator
+  <body class="bg-[#101B16] flex justify-center items-center py-10">
+
+    <div class="p-9 w-[520px]">
+
+      <div class="w-[520px] bg-[#192B22] p-[36px]">
+
+       <div LOCK MARK>
+
+       </div>
+
+       <div class="text-[#F0FDF4] text-[28px]">
+        Password generator
+       </div>
+
+       <div class="text-[#A4B9AD] text-[14px]">
+        A strong password. One click away.
+       </div>
+
+       <div class="text-[#A4B9AD] text-[12px]">
+        Your password
+       </div>
+
+       <div class="bg-[#101B16] flex justify-between">
+         <div 
+         id="show-generated-password"
+         class="text-[#BBF7D0] text-[18px]">
+          K9#mQ2&xR7!vN4@p
+         </div>
+         <div
+         id="copy-generated-password" 
+         class="text-[#DCECE2] text-[12px]">
+          Copy
+         </div>
+       </div>
+
+       <div 
+       id="message"
+       class="text-[#A4B9AD] text-[12px]">
+        Uses letters, numbers, and symbols.
+       </div>
+
+       <div>
+         <div class="text-[#DCECE2] text-[14px]">Password length</div>
+         <div 
+         id="password-length-range-input"
+         class="text-[#86EFAC] text-[18px]">
+          16
+         </div>
+       </div>
+
+       <div BAR >
+         <div EMPTY BAR></div>
+         <div SLIDER MARK></div>
+         <div MOUSE POINTER></div>
+       </div>
+
+       <div class="text-[#8AA294] text-[12px] flex justify-between">
+         <div>8</div>
+         <div id="password-length-output">24</div>
+       </div>
+
+       <button 
+       id="generate-password"
+       class="text-[#102418] text-[14px]">
+        Generate password
+      </button>
+
+       <div class="text-[#8AA294] text-[12px]">Generated in your browser. Never saved.</div>
+
+      </div>
+
+    </div>
+
   </body>
 </html>
