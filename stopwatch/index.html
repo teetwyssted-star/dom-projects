@@ -5,9 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Stopwatch
+  <body class="bg-[#101714] flex justify-center items-center">
+    <div class="bg-[#19231E8C] w-[620px] h-551px rounded-[28px] p-[40px]">
+      <div class="flex justify-between">
+        <div>CLOCK MARK</div>
+        <div
+        id="state" 
+        class="bg-[#B5CBB20D] rounded-[99px] text-[12px] text-[#C5D9BD]">
+        Ready
+       </div>
+      </div>
+      <div class="text-[#F0FDF4] text-[40px]">Stopwatch</div>
+      <div class="text-[#A4B9AD] text-[12px]">Make time for what matters.</div>
+      
+      <DIV class="h-[86px] w-[540px] flex justify-around text-[#EDF3E8]"> 
+
+       <div 
+       class="h-[56px] w-[66px] flex flex-col">
+         <span
+         id="hours" 
+         class="text-[56px]">00</span>
+         <span class="text-[9px] flex justify-center">HOURS</span>
+       </div>
+
+       <div 
+       class="h-[56px] w-[66px] flex flex-col">
+         <span 
+         id="minutes"
+         class="text-[56px]">00</span>
+         <span class="text-[9px] flex justify-center">MINUTES</span>
+       </div>
+       
+       <div 
+       class="h-[56px] w-[66px] flex flex-col">
+         <span 
+         id="seconds"
+         class="text-[56px]">00</span>
+         <span class="text-[9px] flex justify-center">SECONDS</span>
+       </div>
+       
+      </DIV>
+
+      <div class="flex">
+
+       <button 
+       type="button"
+       id="start-button"
+       disabled
+       class="w-[258px] h-[48px] cursor-pointer bg-[#B5CBB2] rounded-[12px] flex justify-center items-center text-[#102418] text-[14px]">
+       Start
+       </button>
+
+       <button 
+       type="button"
+       id="stop-button"
+       disabled
+       class="w-[129px] h-[48px] cursor-pointer flex justify-center items-center w-[129px] h-[48px] rounded-[12px] text-[#DCECE2] text-[14px]">
+       Pause
+       </button>
+
+       <button 
+       type="button"
+       id="reset-button"
+       disabled
+       class="w-[129px] h-[48px] cursor-pointer flex justify-center items-center text-[#A4B9AD] text-[14px]">
+       Reset</div>
+       </button>
+
+      <div class="flex justify-center items-center mt-5 text-[#8AA294] text-[12px]">A moment of focus. At your own peace.</div>
+    </div>
   </body>
 </html>
