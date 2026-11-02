@@ -6,7 +6,48 @@
     <meta name="theme-color" content="#f5f3ee" />
     <title>Analog Clock · A moment in time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>Analog clock</body>
+  <body class="bg-[#F5F3EE] font-inter flex flex-col justify-center items-center">
+
+    <div>
+      <div class="text-[#7B887C] text-[12px] tracking-[3.5px]">A MOMENT IN TIME</div>
+
+    </div>
+    
+    <div
+    id="clock"
+    class="relative aspect-square rounded-full w-[360px]">
+      <div
+      id="markers"
+      class="absolute inset-0">
+      </div>
+
+      <div
+      id="numbers"
+      class="absolute inset-0">
+
+      </div>
+
+      <div
+      id="hour-hand"
+      class="absolute bottomt-1/2 left-1/2 z-10 h-[27%] w-[7px] bg-[#253B35]">
+
+      </div>
+
+      <div
+      id="minute-hand"
+      class="absolute bottomt-1/2 left-1/2 z-20 h-[27%] w-[4px] bg-[#253B35]">
+
+      </div>
+
+      <div
+      id="second-hand"
+      class="absolute bottomt-1/2 left-1/2 z-10 h-[27%] w-[2px] bg-[#C47E57]">
+
+      </div>
+    </div>
+
+  </body>
 </html>
