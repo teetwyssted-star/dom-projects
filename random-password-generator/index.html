@@ -31,16 +31,22 @@
        </div>
 
        <div class="bg-[#101B16] flex justify-between items-center rounded-[12px] w-[448px] h-[64px]">
-         <div 
+         
+         <input 
+         readonly
+         type="text"
          id="show-generated-password"
-         class="text-[#BBF7D0] text-[18px]">
-          K9#mQ2&xR7!vN4@p
-         </div>
+         spellcheck="false"
+         autocomplete="off"
+         class="text-[#BBF7D0] text-[18px]"
+         />
+
          <div
          id="copy-generated-password" 
          class="text-[#DCECE2] text-[12px]">
           Copy
          </div>
+          
        </div>
 
        <div 
@@ -51,30 +57,30 @@
 
        <div class="flex justify-between">
          <div class="text-[#DCECE2] text-[14px]">Password length</div>
-         <div 
-         id="password-length-range-input"
-         class="text-[#86EFAC] text-[18px]">
+         <output 
+         id="password-length-output"
+         class="text-[#86EFAC]">
           16
-         </div>
+         </output>
        </div>
 
-       <div class="w-[448px] h-[20px]">
-         <div class="w-full h-[6px] mt-7 rounded-[3px] bg-[#52665A]">
-           <div class="h-full w-[224px] rounded-[3px] bg-[#4ADE80]">
-             <div class="bg-[#4ADE80] h-[16px] w-[16px] ml-[216px] mt-2 rounded-[8px]"></div>
-           </div>
-          </div>
-       </div>
+       <input
+       id="password-length-range-input"
+       type="range"
+       min="8" max="24" value="16"
+       class="w-full cursor-pointer accent-[#4ADE80]"
+       />
+
 
        <div class="text-[#8AA294] text-[12px] flex justify-between">
-         <div>8</div>
-         <div id="password-length-output">24</div>
+         <span>8</span>
+         <span>24</span>
        </div>
 
        <button 
        id="generate-password"
        type="button"
-       class="w-full h-12 mt-7 bg-[#4ADE80] rounded-[12px] text-[#102418] text-[14px]">
+       class="w-full h-12 mt-7 cursor-pointer bg-[#4ADE80] rounded-[12px] text-[#102418] text-[14px]">
         Generate password
       </button>
 
