@@ -3,7 +3,7 @@ const passwordLengthRangeInput = document.getElementById("password-length-range-
 const passwordLengthOutput = document.getElementById("password-length-output");
 const message = document.getElementById("message");
 const copyGeneratedPasswordButton = document.getElementById("copy-generated-password");
-const showGeneratedPassword = document.getAnimations("show-generated-password");
+const showGeneratedPassword = document.getElementById("show-generated-password");
 
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*?";
 
