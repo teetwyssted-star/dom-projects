@@ -8,87 +8,101 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body class="bg-[#101B16] flex justify-center items-center py-10 font-inter">
-
+  <body
+    class="bg-[#101B16] flex flex-1 justify-center items-center py-10 font-inter"
+  >
     <div class="p-9 w-[520px]">
-
       <div class="w-[520px] bg-[#192B22] p-[36px] rounded-[24px]">
+        <div class="bg-[#4ADE8026] mb-6 rounded-[12px] w-[44px] h-[44px] flex justify-center items-center">
+          <svg
+            width="23"
+            height="23"
+            viewBox="0 0 23 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.66602 9.58325H15.3327C16.9205 9.58325 18.2077 10.8704 18.2077 12.4583V17.2499C18.2077 18.8377 16.9205 20.1249 15.3327 20.1249H7.66602C6.0782 20.1249 4.79102 18.8377 4.79102 17.2499V12.4583C4.79102 10.8704 6.0782 9.58325 7.66602 9.58325Z"
+              stroke-width="1.62917"
+              stroke-linecap="round"
+              stroke="#86EFAC"
+            />
+            <path
+              d="M7.66602 9.58333V6.70833C7.66602 5.69167 8.06988 4.71665 8.78877 3.99776C9.50766 3.27887 10.4827 2.875 11.4993 2.875C12.516 2.875 13.491 3.27887 14.2099 3.99776C14.9288 4.71665 15.3327 5.69167 15.3327 6.70833V9.58333M11.4993 14.375V16.2917"
+              stroke-width="1.62917"
+              stroke-linecap="round"
+              stroke="#86EFAC"
+            />
+          </svg>
+        </div>
 
-       <div LOCK MARK>
+        <div class="text-[#F0FDF4] text-[28px] tracking-tight font-semibold">
+          Password generator
+        </div>
 
-       </div>
+        <div class="mt-2 text-[#A4B9AD] text-sm">
+          A strong password. One click away.
+        </div>
 
-       <div class="text-[#F0FDF4] text-[28px]">
-        Password generator
-       </div>
+        <div class="mt-8 text-[#A4B9AD] text-[12px]">Your password</div>
 
-       <div class="text-[#A4B9AD] text-[14px]">
-        A strong password. One click away.
-       </div>
+        <div
+          class="bg-[#101B16] mt-3 flex justify-between items-center p-3 rounded-[12px] w-[448px] h-[64px]"
+        >
+          <input
+            readonly
+            type="text"
+            id="show-generated-password"
+            spellcheck="false"
+            autocomplete="off"
+            class="text-[#BBF7D0] text-[18px] flex-1 "
+          />
 
-       <div class="text-[#A4B9AD] text-[12px]">
-        Your password
-       </div>
+          <button
+            id="copy-generated-password"
+            class="cursor-pointer bg-[#FFFFFF0D] rounded-lg px-3 py-2 text-[#DCECE2] text-[12px] hover:bg-white/10"
+          >
+            Copy
+          </button>
+        </div>
 
-       <div class="bg-[#101B16] flex justify-between items-center rounded-[12px] w-[448px] h-[64px]">
-         
-         <input 
-         readonly
-         type="text"
-         id="show-generated-password"
-         spellcheck="false"
-         autocomplete="off"
-         class="text-[#BBF7D0] text-[18px] flex-1"
-         />
+        <div id="message" class="mt-3 text-[#A4B9AD] text-[12px]">
+          Uses letters, numbers, and symbols.
+        </div>
 
-         <div
-         id="copy-generated-password" 
-         class="text-[#DCECE2] text-[12px]">
-          Copy
-         </div>
-          
-       </div>
+        <div class="flex justify-between mt-6">
+          <label for="length" class="text-[#DCECE2] text-sm">Password length</label>
+          <output id="password-length-output" class="min-h-5 text-[#86EFAC] font-mono text-lg">
+            16
+          </output>
+        </div>
 
-       <div 
-       id="message"
-       class="text-[#A4B9AD] text-[12px]">
-        Uses letters, numbers, and symbols.
-       </div>
+        <input
+          id="password-length-range-input"
+          type="range"
+          min="8"
+          max="24"
+          value="16"
+          class="mt-1 w-full cursor-pointer accent-[#4ADE80] font-mono"
+        />
 
-       <div class="flex justify-between">
-         <div class="text-[#DCECE2] text-[14px]">Password length</div>
-         <output 
-         id="password-length-output"
-         class="text-[#86EFAC]">
-          16
-         </output>
-       </div>
+        <div class="text-[#8AA294] text-[12px] flex justify-between">
+          <span>8</span>
+          <span>24</span>
+        </div>
 
-       <input
-       id="password-length-range-input"
-       type="range"
-       min="8" max="24" value="16"
-       class="w-full cursor-pointer accent-[#4ADE80]"
-       />
+        <button
+          id="generate-password"
+          type="button"
+          class="w-full h-12 mt-7 cursor-pointer bg-[#4ADE80] rounded-[12px] text-[#102418] text-sm font-semibold hover:bg-[#86efac]"
+        >
+          Generate password
+        </button>
 
-
-       <div class="text-[#8AA294] text-[12px] flex justify-between">
-         <span>8</span>
-         <span>24</span>
-       </div>
-
-       <button 
-       id="generate-password"
-       type="button"
-       class="w-full h-12 mt-7 cursor-pointer bg-[#4ADE80] rounded-[12px] text-[#102418] text-[14px]">
-        Generate password
-      </button>
-
-       <div class="text-[#8AA294] text-[12px] flex justify-center">Generated in your browser. Never saved.</div>
-
+        <div class="text-[#8AA294] text-[12px] mt-5 flex justify-center">
+          Generated in your browser. Never saved.
+        </div>
       </div>
-
     </div>
-
   </body>
 </html>
