@@ -11,23 +11,22 @@ let startTime = 0;
 
 const formatTime = (startTime) => {
     const seconds = Math.floor(startTime%60).toString().padStart(2, "0");
-    const minutes = Math.floor((startTime%3600)/60).toString().padStart(2, "0");
+  const minutes = Math.floor((startTime%3600)/60).toString().padStart(2, "0");
     const hours = Math.floor(startTime/3600).toString().padStart(2, "0")
 
 
-
-    displaySeconds.textContent = seconds
-    displayMinutes.textContent = minutes
-    displayHours.textContent = hours
+    displaySeconds.textContent = seconds;
+    displayMinutes.textContent = minutes;
+    displayHours.textContent = hours;
 };
 
+
 const startTimer = () => {
-    intervalId = setInterval(() => {
+       intervalId = setInterval(() => {
         startTime++
 
-        formatTime();
+        formatTime(startTime);
     }, 1000);
-
     startButton.disabled = true;
     stopButton.disabled = false;
     resetButton.disabled = false;
